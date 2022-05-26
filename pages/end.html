@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/css/quiz.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/end.css">
+    <title>End Screen</title>
+</head>
+<body>
+    <video src="/css/images/naruto_study.mp4" muted loop autoplay></video>
+    <div class="overlay"></div>
+    <div class="container">
+        <div id="end" class="flex-center flex-column">
+            <h1 id="finalScore"></h1>
+            <form class="end-form-container">
+                <h2 id="end-text">
+                    Enter your email below to save score!
+                </h2>
+                <div class="form-control">
+                    <input type="email" name="email" placeholder="Enter Email" id="email"/>
+                </div>                
+                <input id="submitBtn" class="btn" type="submit" value="submit"/>
+            </form>
+            <a href="/quiz.html" class="btn">Play Again</a>
+            <a href="/index.html" class="btn">Go Home</a>
+        </div>
+    </div>
+    <script src="/js/end.js"></script>
+</body>
+</html>

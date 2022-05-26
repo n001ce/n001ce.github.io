@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@100;600&display=swap');
+
+:root{
+--overlay-color: rgba(2, 2, 2, 0.5);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    z-index:1000;
+    font-family: 'Raleway', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    z-index: 1;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-color);
+    mix-blend-mode: overlay;
+    z-index: 2;
+}
+
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.choice-container{
+    display: flex;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    border-radius: 4px;
+    background: #0b0b0b73;
+    font-size: 3.6rem;
+    max-width: 80rem;
+    color: white;
+    font-weight: 900;
+}
+
+.choice-container:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(6, 103, 247, 0.5);
+    transform: scale(1.02);
+    transition: transform 100ms;
+    background: #F2A30B;
+    color: black;
+}
+
+.choice-prefix{
+    padding: 2rem 2.5rem;
+    color: white;
+}
+
+.choice-text{
+    padding: 2rem;
+    width: 100%;
+}
+
+.correct{
+    background: green;
+}
+
+.incorrect{
+    background: red;
+}
+
+/*HUD*/
+#hud{
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud-prefix{
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    font-weight: 900;
+}
+
+.hud-main-text{
+    text-align: center;
+}
+
+#progressBar{
+    width: 20rem;
+    height: 3rem;
+    border: 0.2rem solid rgb(11, 223, 36);
+    margin-top: 2rem;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+#progressBarFull{
+    height: 100%;
+    background: rgb(11, 223, 36);
+    width: 0%;
+}
+
+#question{
+    font-size: 4.4rem;
+    color: #FFE182;
+    background:rgba(0, 0, 0, 0.192);
+    margin-bottom: 5rem;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+#score{
+    font-size: 4.1rem;
+    color: white;
+}
+
+a{
+    font-size: 2.4rem;
+    padding: 1rem 0;
+    width: 20rem;
+    text-align:center;
+    margin-bottom:1rem;
+    text-decoration: none;
+    color: rgb(26, 28, 26);
+    background: #F2A30B;
+    border-radius: 4px;
+    font-weight: 900;
+    z-index: 1000;
+    position: absolute;
+    bottom: 0;
+}
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px){
+    .container{
+        max-width: 100vw;
+    }
+    .choice-container{
+        max-width: 40rem;
+        font-size: 2.5rem;
+        width: 100vw;
+        margin: 0 auto;
+        margin-bottom: 0.7rem;
+        text-align: center;
+    }
+    #question{
+        font-size: 2.5rem;
+        font-weight: 900;
+    }
+    #score{
+        font-size: 2rem;
+        margin-left: 20px;
+        font-weight: 900;
+    }
+    .hud-prefix{
+        font-size: 1.5rem;
+        font-weight: 900;
+    }
+    .choice-prefix{
+        padding: 1rem 1.5rem;
+        color: white;
+        margin-top: 4%;
+    }
+    #progressBar{
+        width: 20rem;
+        height: 3rem;
+        border: 0.2rem solid rgb(11, 223, 36);
+        margin-top: 2rem;
+        border-radius: 50px;
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+
+
+}
